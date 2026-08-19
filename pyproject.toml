@@ -1,0 +1,19 @@
+[project]
+name = "jot-notes"
+version = "0.1.0"
+description = "Self-hosted encrypted notes with git-based sync"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{name = "Ibnu76"}]
+dependencies = ["click>=8.1.0", "rich>=13.0.0"]
+
+[project.optional-dependencies]
+crypto = ["cryptography>=41.0.0"]
+
+[project.scripts]
+jot = "jot.cli:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
